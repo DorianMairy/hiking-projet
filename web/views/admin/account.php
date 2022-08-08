@@ -1,5 +1,5 @@
 <?php
-include_once '../view/inc/header.inc.php';
+include_once 'views/inc/header.inc.php';
 include_once 'model/User.php';
 
 $sql = new user();

@@ -3,6 +3,6 @@
 require_once 'model/Search.php';
 
 if(isset($_POST['submit'])){
-    include_once '../view/Search.php'    ;
+    include_once 'views/Search.php'    ;
 }
 
