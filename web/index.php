@@ -4,7 +4,8 @@ session_start();
 require_once 'core/request.php';
 require_once 'core/router.php';
 require_once 'controller/routes.php';
-
+error_reporting(E_ALL);
+ini_set("display_errors", 1);
 // On utilise les méthodes statiques de la classe Request (pas besoin de l'instancier)
 $uri = Request::uri();
 $method = Request::method();
