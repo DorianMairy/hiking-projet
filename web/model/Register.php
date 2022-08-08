@@ -1,6 +1,6 @@
 <?php
 declare(strict_types = 1);
-require_once '../core/dbinfo.php';
+require_once 'core/dbinfo.php';
 require_once 'dbconnect.php';
 
 require 'PHPMailer/src/Exception.php';
@@ -26,7 +26,7 @@ class Register  extends Dbconnect
                 if (isset($_POST['email']) && isset($_POST['first_name']) && isset($_POST['last_name']) && isset($_POST['login_name']) && isset($_POST['password']) && isset($_POST['confirm_password'])) {
 
                     if (filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)) {
-                        require_once '../core/db.php';
+                        require_once 'core/db.php';
                         //enregistrer les données dans la base de données
                         $stmt = $pdo->prepare("INSERT INTO user (firstName, lastName, nickname, email, password, role, confirmation_email) VALUES (:firstname, :lastname, :loginname, :email, :password, :role, :confirmMail)");
                         $stmt->bindParam(':firstname', $firstName);
@@ -62,7 +62,7 @@ class Register  extends Dbconnect
                         //Redirection
 
                         $message = "User added successfully";
-                        require_once "../view/messages.php";
+                        require_once "view/messages.php";
                         header('Refresh: 2, url=home');
                         header('Location: home');
                         exit();
@@ -82,7 +82,7 @@ class Register  extends Dbconnect
               foreach ($mails as $row):
                   if ($row['email'] === $mail) {
                       $message = "Compte existant";
-                      require_once "../view/messages.php";
+                      require_once "view/messages.php";
                       header('Refresh: 2, url=home');
                       exit();
                   }

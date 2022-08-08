@@ -3,7 +3,7 @@
 declare(strict_types=1);
 
 require_once 'dbconnect.php';
-require_once('../core/db.php');
+require_once('core/db.php');
 
 class Tag extends Dbconnect
 {
@@ -68,7 +68,7 @@ class Tag extends Dbconnect
         $stmt->execute();
 
         $message = "Tag added successfully";
-        require_once "../view/messages.php";
+        require_once "view/messages.php";
         header('Refresh: 2, url=admin?page=tags');
         exit();
     }
@@ -78,7 +78,7 @@ class Tag extends Dbconnect
     {
         for ($i = 0; $i < count($_POST["tags"]); $i++) {
             $queryHikes = "SELECT MAX(id) AS id FROM hikes";
-            $qhikes = $this->connection()->prepare($queryHikes);
+            $qhikes = $this->getconnection()->prepare($queryHikes);
             $qhikes->execute();
             $hikes = $qhikes->fetchAll(PDO::FETCH_ASSOC);
             foreach ($hikes as $row):
@@ -86,7 +86,7 @@ class Tag extends Dbconnect
             endforeach;
             $tag = $_POST['tags'][$i];
             $query = 'INSERT INTO `hikesTag`(`hike_id`, `tag_id`) VALUES (?,?)';
-            $taghike = $this->connection()->prepare($query);
+            $taghike = $this->getconnection()->prepare($query);
             $taghike->execute([$hike, $tag]);
 
         }
@@ -106,7 +106,7 @@ class Tag extends Dbconnect
         $stmt->execute();
 
         $message = "Tag updated successfully";
-        require_once "../view/messages.php";
+        require_once "view/messages.php";
         header('Refresh: 2, url=admin?page=tags');
         exit();
     }
@@ -121,7 +121,7 @@ class Tag extends Dbconnect
             $id = $_GET["id"];
             $d->execute();
             $message = "Tag deleted successfully";
-            require_once "../view/messages.php";
+            require_once "view/messages.php";
             header('Refresh: 2, url=admin?page=tags');
             exit();
         } catch (Exception $e) {

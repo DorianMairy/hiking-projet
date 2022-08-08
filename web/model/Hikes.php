@@ -1,6 +1,6 @@
 <?php
 
-require_once '../core/dbinfo.php';
+require_once 'core/dbinfo.php';
 require_once 'dbconnect.php';
 require_once('Tag.php');
 
@@ -136,7 +136,7 @@ class Hikes extends Dbconnect
         $tag = new Tag();
         $tag->addTagHike();
         $message = "vous avez bien ajouter la randonnée";
-        require_once "../view/messages.php";
+        require_once "view/messages.php";
         header('Refresh: 2, url=my_hikes');
         exit();
     }
@@ -151,7 +151,7 @@ class Hikes extends Dbconnect
             $id = $_GET["id"];
             $d->execute();
             $message = "vous avez bien effacé la randonnée";
-            require_once "../view/messages.php";
+            require_once "view/messages.php";
             header('Refresh: 2, url=my_hikes');
             exit();
         } catch (Exception $e) {

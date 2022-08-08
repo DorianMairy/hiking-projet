@@ -1,5 +1,5 @@
 <?php
-require_once '../core/dbinfo.php';
+require_once 'core/dbinfo.php';
 
 
 class Sql
@@ -225,7 +225,7 @@ class Sql
 
         $this->addTagHike();
         $message = "vous avez bien ajouter la randonnée";
-        require_once "../view/messages.php";
+        require_once "view/messages.php";
         header('Refresh: 2, url=my_hikes');
         exit();
     }
@@ -250,7 +250,7 @@ class Sql
         $stmt->execute();
 
         $message = "Tag added successfully";
-        require_once "../view/messages.php";
+        require_once "view/messages.php";
         header('Refresh: 2, url=admin?page=tags');
         exit();
     }
@@ -339,7 +339,7 @@ class Sql
             $stmt->execute();
             //On défini le message à afficher
             $message = "Hike updated successfully. Redirection...";
-            require_once "../view/messages.php";
+            require_once "view/messages.php";
             //Redirection vers home après 2 secondes
             header("Refresh: 2;URL=my_hikes");
             exit();
@@ -383,7 +383,7 @@ class Sql
             $stmt->execute();
             //On défini le message à afficher
             $message = "User updated successfully. Redirection...";
-            require_once "../view/messages.php";
+            require_once "view/messages.php";
             //Redirection vers home après 2 secondes
             header("Refresh: 2;URL=viewUser");
             exit();
@@ -430,7 +430,7 @@ class Sql
                 $stmt->execute();
                 //On défini le message à afficher
                 $message = "Updated successfully. Redirection...";
-                require_once "../view/messages.php";
+                require_once "view/messages.php";
                 //Redirection vers home après 2 secondes
                 header("Refresh: 2;URL=viewUser");
                 exit();
@@ -453,7 +453,7 @@ class Sql
         $stmt->execute();
 
         $message = "Tag updated successfully";
-        require_once "../view/messages.php";
+        require_once "view/messages.php";
         header('Refresh: 2, url=admin?page=tags');
         exit();
     }
@@ -472,7 +472,7 @@ class Sql
             $id = $_GET["id"];
             $d->execute();
             $message = "vous avez bien effacé la randonnée";
-            require_once "../view/messages.php";
+            require_once "view/messages.php";
             header('Refresh: 2, url=my_hikes');
             exit();
         } catch (Exception $e) {
@@ -493,7 +493,7 @@ class Sql
             $id = $_GET["id"];
             $d->execute();
             $message = "vous avez bien effacé l'utilisateur";
-            require_once "../view/messages.php";
+            require_once "view/messages.php";
             header('Refresh: 2, url=viewUser');
             exit();
         } catch (Exception $e) {
@@ -512,7 +512,7 @@ class Sql
             $id = $_GET["id"];
             $d->execute();
             $message = "Tag deleted successfully";
-            require_once "../view/messages.php";
+            require_once "view/messages.php";
             header('Refresh: 2, url=admin?page=tags');
             exit();
         } catch (Exception $e) {

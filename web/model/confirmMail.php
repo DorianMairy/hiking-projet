@@ -1,6 +1,6 @@
 <?php
 
-require_once '../core/dbinfo.php';
+require_once 'core/dbinfo.php';
 require_once 'dbconnect.php';
 
 class confirmMail extends Dbconnect

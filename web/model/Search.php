@@ -3,7 +3,7 @@
 declare(strict_types=1);
 
 require_once 'dbconnect.php';
-require_once('../core/db.php');
+require_once('core/db.php');
 
 class Search  extends Dbconnect
 {

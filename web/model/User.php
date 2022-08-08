@@ -1,6 +1,6 @@
 <?php
 declare(strict_types=1);
-require_once '../core/dbinfo.php';
+require_once 'core/dbinfo.php';
 require_once 'dbconnect.php';
 
 
@@ -79,7 +79,7 @@ class User extends Dbconnect
             $stmt->execute();
             //On défini le message à afficher
             $message = "User updated successfully. Redirection...";
-            require_once "../view/messages.php";
+            require_once "view/messages.php";
             //Redirection vers home après 2 secondes
             header("Refresh: 2;URL=viewUser");
             exit();
@@ -138,7 +138,7 @@ class User extends Dbconnect
             $stmt->execute();
             //On défini le message à afficher
             $message = "Updated successfully. Redirection...";
-            require_once "../view/messages.php";
+            require_once "view/messages.php";
             //Redirection vers home après 2 secondes
             header("Refresh: 2;URL=account");
             exit();
@@ -161,7 +161,7 @@ class User extends Dbconnect
             $id = $_GET["id"];
             $d->execute();
             $message = "vous avez bien effacé l'utilisateur";
-            require_once "../view/messages.php";
+            require_once "view/messages.php";
             header('Refresh: 2, url=viewUser');
             exit();
         }
