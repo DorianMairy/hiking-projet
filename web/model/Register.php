@@ -54,7 +54,7 @@ class Register  extends Dbconnect
 
 
                             $title = "Merci pour votre inscription";
-                            $body = 'http://localhost:3000/confirmMail?cle=' . $confirmationMail;
+                            $body = 'https://hiking-projet.herokuapp.com/confirmMail?cle=' . $confirmationMail;
                             $from = "randodev02@gmail.com";
                             $name = "randodev";
                             $this->sendEmail($email, $title, $body);
