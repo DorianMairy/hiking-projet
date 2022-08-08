@@ -19,17 +19,17 @@ switch ($page) {
     case 'tags':
         $sql = new Sql();
         $tags = $sql->getTag();
-        require_once '../view/admin/tags.php';
+        require_once 'view/admin/tags.php';
         break;
     case 'add_tag':
         $sql = new Sql();
         $tags = $sql->getTag();
-        require_once '../view/admin/add_tags.php';
+        require_once 'view/admin/add_tags.php';
         break;
     case 'edit_tag':
         $sql = new Sql();
         $tag = $sql->getTagById($_GET['id']);
-        require_once '../view/admin/edit_tags.php';
+        require_once 'view/admin/edit_tags.php';
         break;
     case 'tag_edited':
         $sql = new Sql();

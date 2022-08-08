@@ -1,5 +1,5 @@
 <?php
-include_once '../view/inc/header.inc.php';
+include_once 'view/inc/header.inc.php';
 require_once 'core/db.php';
 require_once 'model/Hikes.php';
 require_once 'model/Tag.php';
@@ -103,4 +103,4 @@ foreach ($hikes as $hike):
         <?php
     }
 endforeach;
-include_once '../view/inc/footer.inc.php';
+include_once 'view/inc/footer.inc.php';

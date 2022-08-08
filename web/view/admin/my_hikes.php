@@ -1,5 +1,5 @@
 <?php
-include_once '../view/inc/header.inc.php';
+include_once 'view/inc/header.inc.php';
 require_once 'model/Hikes.php';
 //Afficher les randonnée par l'id utilisateur
 
@@ -95,4 +95,4 @@ else {
 
 
 <?php
-include_once '../view/inc/footer.inc.php';
+include_once 'view/inc/footer.inc.php';

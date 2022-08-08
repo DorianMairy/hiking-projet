@@ -1,4 +1,4 @@
-<?php include_once '../view/inc/header.inc.php';?>
+<?php include_once 'view/inc/header.inc.php';?>
 <section class="admin">
 <?php include_once 'inc/navigation.php';?>
 
@@ -36,4 +36,4 @@
     </section>
 </section>
 
-<?php include '../view/inc/footer.inc.php'; ?>
+<?php include 'view/inc/footer.inc.php'; ?>

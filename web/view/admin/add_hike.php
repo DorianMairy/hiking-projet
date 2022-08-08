@@ -1,5 +1,5 @@
 <?php
-include_once '../view/inc/header.inc.php';
+include_once 'view/inc/header.inc.php';
 include_once 'model/Hikes.php';
 
 $sql = new Hikes();
@@ -68,7 +68,7 @@ if (!isset($_SESSION['user_id'])) {
             <ul class="tags_list">
             <?php
             // reprendre la db car inconnue
-            require_once '../core/db.php';
+            require_once 'core/db.php';
             try {
                 $q = $pdo->prepare("SELECT * from tags");
                 $q->execute();
@@ -95,4 +95,4 @@ if (!isset($_SESSION['user_id'])) {
         </form>
     </section>
 <?php
-include_once '../view/inc/footer.inc.php';
+include_once 'view/inc/footer.inc.php';

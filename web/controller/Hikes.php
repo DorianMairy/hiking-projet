@@ -18,7 +18,7 @@ class HikesController
         // then the view will actually display them.
 
         //load the view
-        require('../view/homepage.php');
+        require('view/homepage.php');
     }
 
     public function AddHike () {

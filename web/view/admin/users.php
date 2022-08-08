@@ -1,5 +1,5 @@
 <?php
-include_once '../view/inc/header.inc.php';
+include_once 'view/inc/header.inc.php';
 ?>
      <section class="admin">
 <?php
@@ -9,7 +9,7 @@ require_once 'model/User.php';
 //Vérifier que l'utilisateur est connecté
 if (!isset($_SESSION['user_id']) || ($_SESSION['role']) != "admin") {
     $message = "Your are not allowed to access this page.";
-    require_once "../view/messages.php";
+    require_once "view/messages.php";
     header('Refresh: 2, url=home');
     header('Location: home');
     exit();
@@ -75,4 +75,4 @@ $users = $sql->getUser();
 
     </section>
 
-<?php include_once '../view/inc/footer.inc.php';    }
+<?php include_once 'view/inc/footer.inc.php';    }

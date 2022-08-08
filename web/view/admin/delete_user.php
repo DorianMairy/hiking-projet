@@ -1,5 +1,5 @@
 <?php
-include_once '../view/inc/header.inc.php';
+include_once 'view/inc/header.inc.php';
 require_once 'model/User.php';
 
 $sql = new User();
@@ -16,4 +16,4 @@ $user= $sql->delUser($_GET['id']);
         <?php
     }
 
-include_once '../view/inc/footer.inc.php';
+include_once 'view/inc/footer.inc.php';

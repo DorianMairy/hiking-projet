@@ -1,5 +1,5 @@
 <?php
-include_once '../view/inc/header.inc.php';
+include_once 'view/inc/header.inc.php';
 
 
 
@@ -21,4 +21,4 @@ include_once '../view/inc/header.inc.php';
         </div>     
     </form>
 </section>
-<?php include_once '../view/inc/footer.inc.php';
+<?php include_once 'view/inc/footer.inc.php';
